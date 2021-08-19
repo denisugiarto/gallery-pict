@@ -11,5 +11,11 @@ var firebaseConfig = {
   messagingSenderId: "458566837331",
   appId: "1:458566837331:web:1dbee737cd58b7b56cd2a6",
 };
-
+// Initialize Firebase
 firebase.initializeApp(firebaseConfig);
+
+const projectStorage = firebase.storage();
+const projectFirestore = firebase.firestore();
+
+
+export { projectStorage, projectFirestore };
