@@ -1,15 +1,16 @@
 import firebase from 'firebase/app';
 import 'firebase/storage';
 import 'firebase/firestore';
+import dotenv from 'dotenv';
 
 //Firebase config
 var firebaseConfig = {
-  apiKey: "AIzaSyDzdt2WdIJV0uoneQGMSFZUN0L5wCP2MeA",
-  authDomain: "gallery-picts.firebaseapp.com",
-  projectId: "gallery-picts",
-  storageBucket: "gallery-picts.appspot.com",
-  messagingSenderId: "458566837331",
-  appId: "1:458566837331:web:1dbee737cd58b7b56cd2a6",
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
